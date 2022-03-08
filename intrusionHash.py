@@ -7,18 +7,16 @@ import hashlib, os, glob
 #ignore list
 ignore = []
 
+#files/directories with name as key and hash as value to detect file movements
+filedict={}
+dirdict={}
+
 #root directory to start at
 rootdirectory = "/**"
 
-#class declarations
-#Class to keep track of files hashed.
-class fileHash:
-  pass #will revise once more research
-
 #iterate through the different directories
-for x in glob.glob(rootdirectory,recursive=True):
-  print(x)
-  #if os.path.is_file(x):
-    #print(x)
-  #elif os.path.is_dir(x):
-    #print(x)
+for x in glob.iglob(rootdirectory,recursive=True):
+  if os.path.isfile(x):
+    print("file: "+os.path.basename(x))
+  elif os.path.isdir(x):
+    print("Directory: "+os.path.dirname(x))
