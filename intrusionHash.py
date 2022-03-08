@@ -8,7 +8,7 @@ import hashlib, os, glob
 ignore = []
 
 #root directory to start at
-rootdirectory = "/"
+rootdirectory = "/*"
 
 #class declarations
 #Class to keep track of files hashed.
