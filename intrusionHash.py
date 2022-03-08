@@ -17,7 +17,7 @@ class fileHash:
 
 #iterate through the different directories
 for x in glob.glob(rootdirectory,recursive=True):
-  if os.is_file(x):
+  if os.path.is_file(x):
     print(x)
-  elif os.is_dir(x):
+  elif os.path.is_dir(x):
     print(x)
